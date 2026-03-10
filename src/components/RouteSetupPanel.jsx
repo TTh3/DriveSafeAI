@@ -2,11 +2,11 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Play, MapPin, Clock, Trash2 } from 'lucide-react';
 
 export const COUNTRIES = [
-  { code: 'AU', name: 'Australia', handbook: 'https://mylicence.sa.gov.au/my-car-licence/the-drivers-handbook' },
+  { code: 'AU', name: 'Australia', handbook: 'https://mylicence.sa.gov.au/road-rules/the-drivers-handbook' },
   { code: 'US', name: 'United States', handbook: 'https://www.dmv.ca.gov/portal/handbook/california-driver-handbook/' },
-  { code: 'GB', name: 'United Kingdom', handbook: 'https://www.gov.uk/browse/driving/highway-code-and-safety' },
+  { code: 'GB', name: 'United Kingdom', handbook: 'https://www.gov.uk/browse/driving/highway-code-road-safety' },
   { code: 'JP', name: 'Japan', handbook: 'https://english.jaf.or.jp/driving-in-japan/rules-of-the-road' },
-  { code: 'DE', name: 'Germany', handbook: 'https://www.bmdv.bund.de/SharedDocs/EN/publications/road-traffic-regulations-stvo.html' }
+  { code: 'DE', name: 'Germany', handbook: 'https://euagenda.eu/upload/publications/untitled-96809-ea.pdf' }
 ];
 
 export default function RouteSetupPanel({ onGenerateRoute }) {

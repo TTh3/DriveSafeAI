@@ -179,7 +179,7 @@ export default function Simulator() {
           setProgress(stats.progress);
           // Map the current active step to an educational safety tip
           if (stats.instruction) {
-            setFeedback(getDrivingFeedback(stats.instruction));
+            setFeedback(getDrivingFeedback(stats.instruction, activeCountry?.code || 'US'));
           } else {
             setFeedback(null);
           }
@@ -204,7 +204,7 @@ export default function Simulator() {
         },
       });
     },
-    [toast],
+    [toast, activeCountry],
   );
 
   const handleReset = useCallback(() => {
