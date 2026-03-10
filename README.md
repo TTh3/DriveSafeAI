@@ -4,6 +4,8 @@
   <h1>🚗 DriveSafeAI</h1>
   <p><strong>Learn to Drive Safely with AI — A 3D Educational Driving Simulator</strong></p>
 
+  <h3><a href="https://drive-safe-ai-kappa.vercel.app/">🌐 Play the Simulator Live Here!</a></h3>
+
   <p>
     <a href="#-about-drivesafeai">About</a> •
     <a href="#-features">Features</a> •
@@ -98,5 +100,5 @@ Whether you are a learner driver seeking visual aids, a driving instructor, or a
 <div align="center">
   <i>Drive Safe. Learn Smart.</i>
   <br />
-  Made with ❤️ by the DriveSafeAI Team. Entirely AI Generated.
+  Made with ❤️ by the DriveSafeAI Team.
 </div>
