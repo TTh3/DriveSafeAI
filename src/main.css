@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 30% 96%;
+    --foreground: 222 47% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 15%;
+
+    --primary: 217 91% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 210 20% 90%;
+    --secondary-foreground: 222 30% 30%;
+
+    --muted: 210 15% 92%;
+    --muted-foreground: 215 15% 45%;
+
+    --accent: 210 18% 88%;
+    --accent-foreground: 222 47% 15%;
+
+    --destructive: 0 84% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 152 60% 42%;
+    --warning: 38 90% 50%;
+
+    --border: 210 20% 86%;
+    --input: 210 20% 86%;
+    --ring: 217 91% 55%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 210 25% 94%;
+    --sidebar-foreground: 222 30% 25%;
+    --sidebar-primary: 217 91% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 18% 88%;
+    --sidebar-accent-foreground: 222 30% 25%;
+    --sidebar-border: 210 20% 86%;
+    --sidebar-ring: 217 91% 55%;
+  }
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: 'Outfit', system-ui, -apple-system, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+  }
+}
+
+@layer utilities {
+  .glass {
+    background: hsl(0 0% 100% / 0.9);
+    backdrop-filter: blur(12px);
+    border: 1px solid hsl(210 20% 86% / 0.8);
+    box-shadow: 0 4px 16px hsl(210 20% 50% / 0.08);
+  }
+
+  .text-gradient {
+    background: linear-gradient(135deg, hsl(217 91% 50%), hsl(152 60% 42%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+
+/* ── Full-screen map ── */
+#map {
+  width: 100vw;
+  height: 100vh;
+}
+
+/* ── Shared HUD card ── */
+@layer components {
+  .card {
+    background-color: hsl(6 6% 20% / 0.88);
+    backdrop-filter: blur(12px);
+    border: 1px solid hsl(210 20% 86% / 0.8);
+    box-shadow: 0 4px 16px hsl(210 20% 50% / 0.08);
+    border-radius: 0.75rem;
+    padding: 0.75rem 1rem;
+    color: hsl(222 47% 15%);
+    font-size: 0.8125rem;
+    pointer-events: auto;
+  }
+}
+
+/* ── Progress fill gradient (can't express transition + gradient purely in Tailwind) ── */
+#prog-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #1e88e5, #42a5f5);
+  transition: width 0.08s linear;
+}
